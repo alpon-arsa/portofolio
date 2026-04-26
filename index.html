@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alvon Arsa | UI/UX Designer & Web Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Star Canvas -->
+  <canvas id="starCanvas"></canvas>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-bar"></div>
+      <span class="loader-text">Initializing...</span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <span class="logo-text">arsaaaaaangelo_<span class="accent">.</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero"    class="nav-link">Beranda</a></li>
+      <li><a href="#about"   class="nav-link">Tentang</a></li>
+      <li><a href="#projects" class="nav-link">Proyek</a></li>
+      <li><a href="#contact" class="nav-link">Kontak</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="lang-toggle">ID</span>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#hero"     class="mobile-link">Beranda</a></li>
+      <li><a href="#about"    class="mobile-link">Tentang</a></li>
+      <li><a href="#projects" class="mobile-link">Proyek</a></li>
+      <li><a href="#contact"  class="mobile-link">Kontak</a></li>
+    </ul>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <!-- Background blobs -->
+    <div class="hero-blob hero-blob--tr"></div>
+    <div class="hero-blob hero-blob--bl"></div>
+
+    <div class="container hero-container">
+      <!-- LEFT -->
+      <div class="hero-left">
+        <span class="hero-label reveal-up">HALO, SAYA</span>
+        <h1 class="hero-name reveal-up delay-1">Alvon Arsa<br>Angelo Aryasuta</h1>
+        <p class="hero-role reveal-up delay-2">
+          Seorang <span class="accent-text underline-accent">UI/UX Designer &amp; Web Developer</span>
+        </p>
+
+        <!-- Social icons -->
+        <div class="hero-socials reveal-up delay-3">
+          <a href="https://github.com/" target="_blank" class="social-icon" aria-label="GitHub" id="icon-github"></a>
+          <a href="https://www.linkedin.com/in/alvon-arsa-69786138b/" target="_blank" class="social-icon" aria-label="LinkedIn" id="icon-linkedin"></a>
+          <a href="https://instagram.com/" target="_blank" class="social-icon" aria-label="Instagram" id="icon-instagram"></a>
+          <a href="https://tiktok.com/" target="_blank" class="social-icon" aria-label="TikTok" id="icon-tiktok"></a>
+        </div>
+
+        <p class="hero-desc reveal-up delay-4">
+          Merancang tampilan dan pengalaman pengguna yang intuitif, menarik, serta mudah digunakan. Berpengalaman dalam UI/UX Design dan pengembangan web modern.
+        </p>
+
+        <div class="hero-cta reveal-up delay-5">
+          <a href="#projects" class="btn btn-dark">Lihat Proyek ↗</a>
+          <a href="#contact"  class="btn btn-outline">Kontak Saya</a>
+        </div>
+      </div>
+
+      <!-- RIGHT — Profile card -->
+      <div class="hero-right reveal-up delay-2">
+        <div class="profile-card">
+          <div class="profile-photo">
+            <img src="img/potoawalberanda.png" alt="Alvon Arsa" class="profile-photo-inner" />
+          </div>
+          <div class="profile-card-footer">
+            <div class="profile-info">
+              <span class="profile-online-dot"></span>
+              <div>
+                <span class="profile-username">@alvon_arsa</span>
+                <span class="profile-status">Online</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-contact-me">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll">
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TENTANG ===================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-card reveal-up">
+        <!-- Left: photo -->
+        <div class="about-photo">
+          <img src="img/pototentangkita.jpeg" alt="Alvon Arsa" class="about-photo-inner" />
+        </div>
+        <!-- Right: text -->
+        <div class="about-text">
+          <h2 class="about-title">Tentang <span class="accent-text">Saya</span></h2>
+          <div class="about-accent-line"></div>
+          <p class="about-subtitle"><em>Perpaduan logika kode dan estetika desain.</em></p>
+          <p class="about-body">
+            Mahasiswa D4 Teknik Informatika semester 4 di Politeknik Negeri Jember yang berfokus pada bidang UI/UX Design dan pengembangan web. Memiliki minat dalam merancang tampilan dan pengalaman pengguna yang intuitif, menarik, serta mudah digunakan.
+          </p>
+          <p class="about-body">
+            Berpengalaman dalam membuat desain antarmuka aplikasi berbasis web dan mobile, mulai dari tahap perencanaan, wireframing, hingga prototyping. Dikenal sebagai pribadi yang adaptif, komunikatif dalam bekerja secara tim, serta konsisten dalam memberikan kontribusi pada proyek desain.
+          </p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-num accent-text" data-target="2" data-suffix="+">0</span>
+              <span class="stat-label">TAHUN PENGALAMAN</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num accent-text" data-target="13" data-suffix="+">0</span>
+              <span class="stat-label">PROYEK SELESAI</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num accent-text" data-target="7" data-suffix="+">0</span>
+              <span class="stat-label">KLIEN PUAS</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-outline-sm">Unduh CV ↓</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">Tools &amp; Teknologi</span>
+        <h2 class="section-title reveal-up delay-1">Yang Saya <span class="accent-text">Kuasai</span></h2>
+      </div>
+
+      <div class="tools-grid">
+        <!-- Row 1: Frontend/Dev -->
+        <div class="tool-card reveal-up delay-1">
+          <div class="tool-icon" id="tool-react"></div>
+          <span class="tool-name">React</span>
+          <span class="tool-cat">FRONTEND LIB</span>
+        </div>
+        <div class="tool-card reveal-up delay-2">
+          <div class="tool-icon" id="tool-tailwind"></div>
+          <span class="tool-name">Tailwind</span>
+          <span class="tool-cat">CSS FRAMEWORK</span>
+        </div>
+        <div class="tool-card reveal-up delay-3">
+          <div class="tool-icon" id="tool-firebase"></div>
+          <span class="tool-name">Firebase</span>
+          <span class="tool-cat">BACKEND SERVICE</span>
+        </div>
+        <div class="tool-card reveal-up delay-4">
+          <div class="tool-icon" id="tool-nextjs"></div>
+          <span class="tool-name">Next.js</span>
+          <span class="tool-cat">WEB FRAMEWORK</span>
+        </div>
+        <div class="tool-card reveal-up delay-1">
+          <div class="tool-icon" id="tool-vscode"></div>
+          <span class="tool-name">VS Code</span>
+          <span class="tool-cat">CODE EDITOR</span>
+        </div>
+        <div class="tool-card reveal-up delay-2">
+          <div class="tool-icon" id="tool-git"></div>
+          <span class="tool-name">Git / Github</span>
+          <span class="tool-cat">VERSION CONTROL</span>
+        </div>
+
+        <!-- Row 2: Design -->
+        <div class="tool-card reveal-up delay-3">
+          <div class="tool-icon" id="tool-figma"></div>
+          <span class="tool-name">Figma</span>
+          <span class="tool-cat">UI/UX DESIGN</span>
+        </div>
+        <div class="tool-card reveal-up delay-4">
+          <div class="tool-icon" id="tool-photoshop"></div>
+          <span class="tool-name">Photoshop</span>
+          <span class="tool-cat">IMAGE EDITING</span>
+        </div>
+        <div class="tool-card reveal-up delay-1">
+          <div class="tool-icon" id="tool-lightroom"></div>
+          <span class="tool-name">Lightroom</span>
+          <span class="tool-cat">COLOR GRADING</span>
+        </div>
+        <div class="tool-card reveal-up delay-2">
+          <div class="tool-icon" id="tool-illustrator"></div>
+          <span class="tool-name">Illustrator</span>
+          <span class="tool-cat">VECTOR ART</span>
+        </div>
+        <div class="tool-card reveal-up delay-3">
+          <div class="tool-icon" id="tool-canva"></div>
+          <span class="tool-name">Canva</span>
+          <span class="tool-cat">LAYOUT DESIGN</span>
+        </div>
+        <div class="tool-card reveal-up delay-4">
+          <div class="tool-icon" id="tool-sketch"></div>
+          <span class="tool-name">Sketch</span>
+          <span class="tool-cat">PROTOTYPING</span>
+        </div>
+
+        <!-- Row 3: Video -->
+        <div class="tool-card reveal-up delay-1">
+          <div class="tool-icon" id="tool-premiere"></div>
+          <span class="tool-name">Premiere Pro</span>
+          <span class="tool-cat">VIDEO EDITING</span>
+        </div>
+        <div class="tool-card reveal-up delay-2">
+          <div class="tool-icon" id="tool-aftereffects"></div>
+          <span class="tool-name">After Effects</span>
+          <span class="tool-cat">MOTION VFX</span>
+        </div>
+        <div class="tool-card reveal-up delay-3">
+          <div class="tool-icon" id="tool-capcut"></div>
+          <span class="tool-name">CapCut</span>
+          <span class="tool-cat">MOBILE EDITING</span>
+        </div>
+        <div class="tool-card reveal-up delay-4">
+          <div class="tool-icon" id="tool-davinci"></div>
+          <span class="tool-name">DaVinci</span>
+          <span class="tool-cat">COLORIST</span>
+        </div>
+        <div class="tool-card reveal-up delay-1">
+          <div class="tool-icon" id="tool-audition"></div>
+          <span class="tool-name">Audition</span>
+          <span class="tool-cat">AUDIO MIXING</span>
+        </div>
+        <div class="tool-card reveal-up delay-2">
+          <div class="tool-icon" id="tool-obs"></div>
+          <span class="tool-name">OBS Studio</span>
+          <span class="tool-cat">STREAMING</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROYEK ===================== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">Portofolio</span>
+        <h2 class="section-title reveal-up delay-1">Proyek <span class="accent-text">Terpilih</span></h2>
+        <p class="section-sub reveal-up delay-2">Beberapa karya yang menyoroti keahlian saya.</p>
+      </div>
+
+      <div class="projects-layout">
+        <!-- Large card left -->
+        <div class="project-large reveal-left">
+          <div class="project-img project-img--large">
+            <img src="img/cucidosa.png" alt="Cuci Dosa — Kasir Cuci Mobil" class="project-img-photo" />
+            <div class="project-img-overlay">
+              <a href="#contact" class="project-view-btn">Lihat ↗</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">UI/UX</span>
+              <span class="tag">Desktop App</span>
+            </div>
+            <h3 class="project-title">Cuci Dosa — Kasir Cuci Mobil</h3>
+            <p class="project-desc">Merancang UI/UX aplikasi kasir berbasis desktop untuk UMKM cuci mobil. Meliputi riset kebutuhan pengguna, user flow, wireframe, prototyping, hingga usability testing.</p>
+            <a href="#contact" class="project-link-text">Lihat ↗</a>
+          </div>
+        </div>
+
+        <!-- 2×2 grid right -->
+        <div class="projects-small-grid">
+          <div class="project-small reveal-up delay-1">
+            <div class="project-img project-img--small" style="background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);">
+              <div class="project-img-overlay">
+                <a href="#contact" class="project-view-btn">Lihat ↗</a>
+              </div>
+            </div>
+            <div class="project-small-body">
+              <div class="project-tags">
+                <span class="tag">UI/UX</span>
+                <span class="tag">Mobile</span>
+              </div>
+              <h4 class="project-small-title">Techtopia</h4>
+            </div>
+          </div>
+
+          <div class="project-small reveal-up delay-2">
+            <div class="project-img project-img--small">
+              <img src="img/nganjukabirupa.jpg" alt="Abirupa — Layanan Disporabudpar" class="project-img-photo" />
+              <div class="project-img-overlay">
+                <a href="#contact" class="project-view-btn">Lihat ↗</a>
+              </div>
+            </div>
+            <div class="project-small-body">
+              <div class="project-tags">
+                <span class="tag">UI/UX</span>
+                <span class="tag">Web</span>
+              </div>
+              <h4 class="project-small-title">Abirupa</h4>
+            </div>
+          </div>
+
+
+
+    
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== KONTAK ===================== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">Hubungi Saya</span>
+        <h2 class="section-title reveal-up delay-1">Mari <span class="accent-text">Terhubung</span></h2>
+        <p class="section-sub reveal-up delay-2">Saya selalu terbuka untuk proyek baru atau sekadar obrolan. Kirimkan sinyal Anda.</p>
+      </div>
+
+      <div class="contact-card reveal-up delay-1">
+        <!-- LEFT: info -->
+        <div class="contact-info">
+          <div class="contact-status">
+            <span class="status-dot"></span>
+            <span class="status-text">SYSTEM STATUS: ONLINE</span>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon" id="contact-icon-email"></div>
+            <div class="contact-item-body">
+              <span class="contact-item-label">EMAIL ME</span>
+              <span class="contact-item-value">arsaalvon@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon" id="contact-icon-wa"></div>
+            <div class="contact-item-body">
+              <span class="contact-item-label">CHAT WHATSAPP</span>
+              <span class="contact-item-value">+62 856 4598 8547</span>
+            </div>
+          </div>
+
+          <div class="contact-uplink">
+            <div class="contact-uplink-icon" id="contact-icon-signal"></div>
+            <span class="contact-uplink-text">ESTABLISHING UPLINK...</span>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://github.com/alpon-arsa" target="_blank" class="contact-social-btn" aria-label="GitHub" id="cs-github"></a>
+            <a href="https://www.linkedin.com/in/alvon-arsa-69786138b/" target="_blank" class="contact-social-btn" aria-label="LinkedIn" id="cs-linkedin"></a>
+            <a href="https://instagram.com/arsaaaaaangelo_/" target="_blank" class="contact-social-btn" aria-label="Instagram" id="cs-instagram"></a>
+          </div>
+        </div>
+
+        <!-- RIGHT: form -->
+        <div class="contact-form-wrap">
+          <p class="contact-form-header">✈ INITIATE DATA TRANSMISSION</p>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <span class="form-icon" id="form-icon-person"></span>
+              <input type="text" class="form-input" placeholder="ID Pengirim / Nama" required />
+            </div>
+            <div class="form-group">
+              <span class="form-icon" id="form-icon-email"></span>
+              <input type="email" class="form-input" placeholder="Frekuensi Email" required />
+            </div>
+            <div class="form-group">
+              <textarea class="form-input form-textarea" placeholder="Data Transmisi Pesan" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-transmit">
+              <span class="btn-text">INISIASI TRANSMISI ↗</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">ALVON<span class="accent">.</span></span>
+        <p class="footer-copy">Alvon Arsa Angelo Aryasuta &copy; 2026</p>
+        <div class="footer-links">
+          <a href="#hero">Beranda</a>
+          <a href="#projects">Proyek</a>
+          <a href="#contact">Kontak</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="icons.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

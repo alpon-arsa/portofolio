@@ -176,6 +176,21 @@ const icons = {
   envelope: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
     <rect x="2" y="4" width="20" height="16" rx="2"/>
     <path d="M2 7l10 7 10-7"/>
+  </svg>`,
+
+  // ---- CERTIFICATION ICONS ----
+  certificate: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2L2 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+    <path d="M10 17l-3-3 1.41-1.41L10 14.17l4.59-4.58L16 11l-6 6z"/>
+  </svg>`,
+
+  documentation: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+    <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+    <polyline points="14 2 14 8 20 8"/>
+    <line x1="12" y1="13" x2="8" y2="13"/>
+    <line x1="12" y1="17" x2="8" y2="17"/>
+    <polyline points="9 9 8 10 9 11"/>
+    <polyline points="15 9 14 10 15 11"/>
   </svg>`
 };
 
@@ -228,7 +243,13 @@ function injectIcons() {
     { id: 'cs-instagram', icon: 'instagram' }
   ];
 
-  const all = [...heroSocials, ...toolIcons, ...contactIcons, ...contactSocials];
+  // Certification icons
+  const certIcons = [
+    { id: 'cert-icon-certificate',    icon: 'certificate' },
+    { id: 'cert-icon-documentation',  icon: 'documentation' }
+  ];
+
+  const all = [...heroSocials, ...toolIcons, ...contactIcons, ...contactSocials, ...certIcons];
 
   all.forEach(({ id, icon }) => {
     const el = document.getElementById(id);

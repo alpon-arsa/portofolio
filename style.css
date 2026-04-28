@@ -909,6 +909,82 @@ section { padding: 120px 0; }
 .form-group:has(.form-textarea) { align-items: flex-start; }
 .form-group:has(.form-textarea) .form-icon { top: 14px; }
 
+/* ===== CERTIFICATIONS & DOCUMENTATION ===== */
+.certifications { background: transparent; }
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.cert-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 22px;
+  padding: 32px 28px;
+  display: flex; flex-direction: column; gap: 16px;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--glass-shadow);
+  cursor: default;
+}
+.cert-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  pointer-events: none;
+}
+.cert-card:hover {
+  border-color: rgba(0,212,170,0.35);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 56px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.09);
+}
+.cert-icon {
+  width: 56px; height: 56px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(0,212,170,0.1);
+  border: 1px solid rgba(0,212,170,0.2);
+  border-radius: 14px;
+  margin-bottom: 8px;
+}
+.cert-icon svg { width: 32px; height: 32px; color: var(--accent); }
+.cert-title {
+  font-family: var(--font2);
+  font-size: 22px; font-weight: 700;
+  color: var(--text);
+}
+.cert-desc {
+  font-size: 14px; color: var(--muted);
+  line-height: 1.7;
+  flex-grow: 1;
+}
+.cert-stats {
+  display: flex; gap: 24px;
+  padding: 20px 24px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.cert-stat-item {
+  display: flex; flex-direction: column; gap: 4px;
+}
+.cert-stat-num {
+  font-family: var(--font2);
+  font-size: 24px; font-weight: 700;
+  color: var(--accent);
+}
+.cert-stat-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--muted);
+}
+
 /* ===== FOOTER ===== */
 .footer {
   padding: 36px 0;
@@ -956,6 +1032,7 @@ section { padding: 120px 0; }
   .projects-layout { grid-template-columns: 1fr; }
   .contact-card { grid-template-columns: 1fr; }
   .contact-info { border-right: none; border-bottom: 1px solid var(--border); }
+  .cert-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
   .nav { padding: 16px 24px; }
@@ -964,13 +1041,25 @@ section { padding: 120px 0; }
   .hamburger { display: flex; }
   .hero { padding: 100px 0 80px; }
   .container { padding: 0 24px; }
-  section { padding: 80px 0; }
+  section { padding: 60px 0; }
   .tools-grid { grid-template-columns: repeat(3, 1fr); }
   .projects-small-grid { grid-template-columns: 1fr 1fr; }
   .about-stats { flex-direction: column; gap: 20px; }
   .footer-inner { flex-direction: column; text-align: center; }
   body { cursor: auto; }
   .cursor, .cursor-follower { display: none; }
+  
+  /* Certification cards responsive */
+  .cert-card { padding: 24px 18px; gap: 14px; }
+  .cert-icon { width: 44px; height: 44px; }
+  .cert-icon svg { width: 26px; height: 26px; }
+  .cert-title { font-size: 17px; }
+  .cert-desc { font-size: 13px; line-height: 1.6; }
+  .cert-stats { padding: 14px 16px; gap: 14px; }
+  .cert-stat-num { font-size: 20px; }
+  .cert-stat-label { font-size: 9px; }
+  .btn-outline-sm { padding: 8px 16px; font-size: 12px; }
+  .section-header { margin-bottom: 48px; }
 }
 @media (max-width: 480px) {
   .tools-grid { grid-template-columns: repeat(2, 1fr); }
@@ -978,4 +1067,79 @@ section { padding: 120px 0; }
   .hero-cta { flex-direction: column; }
   .about-stats { flex-direction: row; flex-wrap: wrap; justify-content: center; }
   .contact-info, .contact-form-wrap { padding: 28px 24px; }
+  
+  /* Certification cards untuk mobile kecil */
+  .cert-grid { gap: 16px; }
+  .cert-card { 
+    padding: 20px 16px; 
+    gap: 14px;
+  }
+  .cert-icon { 
+    width: 40px; 
+    height: 40px; 
+  }
+  .cert-icon svg { 
+    width: 24px; 
+    height: 24px; 
+  }
+  .cert-title { 
+    font-size: 16px; 
+    margin-bottom: 4px;
+  }
+  .cert-desc { 
+    font-size: 12px; 
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .cert-stats { 
+    padding: 12px 14px; 
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .cert-stat-item {
+    flex: 1;
+    min-width: 80px;
+  }
+  .cert-stat-num { 
+    font-size: 18px; 
+  }
+  .cert-stat-label { 
+    font-size: 8px; 
+  }
+  .btn-outline-sm { 
+    padding: 8px 16px; 
+    font-size: 11px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Section padding untuk mobile */
+  section { padding: 60px 0; }
+  .section-header { margin-bottom: 40px; }
+  .section-title { font-size: clamp(24px, 4vw, 32px); }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .container { padding: 0 16px; }
+  .cert-card { 
+    padding: 16px 12px; 
+    gap: 12px;
+  }
+  .cert-title { 
+    font-size: 15px; 
+  }
+  .cert-desc { 
+    font-size: 11px; 
+  }
+  .cert-stats { 
+    padding: 10px 12px; 
+    gap: 8px;
+  }
+  .btn-outline-sm { 
+    padding: 7px 14px; 
+    font-size: 10px;
+  }
+  .section-title { font-size: clamp(20px, 3vw, 28px); }
+  .section-tag { font-size: 10px; }
 }
